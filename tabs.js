@@ -127,7 +127,7 @@ module.exports = function (content, onSelect, onClose) {
       if(tabs.children[i] && tabs.children[i].page === page) {
         //already set, and in correct place. do nothing
       } else if(~(j = find(tabs, function (tab) { return tab.page === page }))) {
-        moveTo(tabs[j], content, i)
+        moveTo(tabs[j], tabs, i)
       } else {
         tabs.appendChild(build_tab(page))
       }
